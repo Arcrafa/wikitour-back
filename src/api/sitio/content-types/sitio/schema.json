@@ -26,7 +26,7 @@
         "audios"
       ]
     },
-    "hubicacion": {
+    "ubicacion": {
       "type": "string"
     },
     "descripcion": {
@@ -37,6 +37,9 @@
       "relation": "oneToMany",
       "target": "api::oferta.oferta",
       "mappedBy": "sitio"
+    },
+    "descripcionlarga": {
+      "type": "text"
     }
   }
 }
