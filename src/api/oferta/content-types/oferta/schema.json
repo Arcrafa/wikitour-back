@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ofertas",
+  "info": {
+    "singularName": "oferta",
+    "pluralName": "ofertas",
+    "displayName": "Oferta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "sitio": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sitio.sitio",
+      "inversedBy": "ofertas"
+    },
+    "precio": {
+      "type": "decimal"
+    },
+    "numpersonas": {
+      "type": "integer"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "ofertas"
+    }
+  }
+}
